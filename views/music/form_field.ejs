@@ -2,28 +2,20 @@
 
 
 
- <!--   setting the input field as required so the user cant skip the field. Also checking the user input with regex pattern to see if user input matches with alphabets and numbers.
-if a user enter anything other than alphabet and numbers an error is show.
-Also defining the allowed length of data to be 20. So if a user type more than 20 character a error is shown.         -->
-
+ 
 <div class="form-group">
   <label for="instrument">Instrument</label>
 
   <input  required value="<%= music.instrument %>" type="text" pattern="[A-z0-9À-ž\s]+" name="instrument" id="instrument"   maxlength="20" class="form-control">
 </div>
 
- <!--   setting the input field as required so the user cant skip the field. Also checking the user input with regex pattern to see if user input matches with alphabets and numbers.
-if a user enter anything other than alphabet and numbers an error is show.
-Also defining the allowed length of data to be 20. So if a user type more than 20 character a error is shown.         -->
+ 
 <div class="form-group">
   <label for="price">Price</label>
-  <!-- also the value is set in the form when user click on edit document button option on every record.
-Which help the user to see the previous value and update whatever is required.       -->
+ 
   <input  required value="<%= music.price %>" type="text" pattern="[A-z0-9À-ž\s]+" name="price" id="price"  maxlength="25"  class="form-control">
 </div>
- <!--   setting the price input field as required so the user cant skip the field. Also checking the user input is a number by defining the type. And step is used to get decimal number from user.
-if a user enter anything other than alphabet and numbers an error is show.
-Also defining the allowed length of data to be 10. So if a user type more than 10 numbers a error is show. the onkeypress prpery is used to check is the length of the string is more than 10.       -->
+ 
 <div class="form-group">
   <label for="color">Color</label>
   <input  required value="<%= music.color %>" type="text" step="0.01" name="color" id="color" maxlength="25"  class="form-control">
@@ -39,8 +31,8 @@ Also defining the allowed length of data to be 10. So if a user type more than 1
   <input  required value="<%= music.comments %>" type="text" step="0.01" name="comments" id="comments" maxlength="25"  class="form-control">
 </div>
 
- <!--  this is a cancel button. When clicked user is taken to the homepage - product section        -->
-<a href="/#instruments" class="btn btn-danger" >Cancel</a>
-<!--  this is a save button. When clicked user either creat new document or update an existing one.      -->
 
- <button class="btn btn-primary"  type="submit" style="background-color: #f3bf3a;"> Save  </button>
+<a href="/#instruments" class="btn btn-danger" type="submit" style="background-color: hsla(239, 89%, 59%, 0.925);">Cancel</a>
+
+
+ <button class="btn btn-danger"  type="submit" style="background-color: #f33a43;"> Save  </button>

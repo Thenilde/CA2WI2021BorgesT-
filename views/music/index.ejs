@@ -14,6 +14,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
+     <!-- Bootstrap core JavaScript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/agency.js"></script>
 
 
 </head>
@@ -38,7 +43,7 @@
                  <h2 class="text-uppercase section-heading"> Instruments  </h2>
          
             </div>
-            <a href="/musics/new" class="btn btn-success">New Instrument</a>
+            <a href="/musics/new" class="btn btn-success" style="margin-top: 25px;">New Instrument</a>
              <div class="col-lg-12 text-center"> <p> </p>   </div>
              
  
@@ -68,13 +73,14 @@
                             <td>
                               
                                   <a href="/musics/edit/<%= music.id %>"  >
-                                <button class="btn btn-success" style="margin-left: 5px;" type="submit"><i class="fa fa-pencil" style="font-size: 15px;">
+                                <button class="btn btn-success" style="margin-left: 5px;" type="submit"><i class="fas fa-user-edit" style="font-size: 15px;">
                                 </i></button>
                             </a>
 
                                
                                 <form action="/musics/<%= music.id %>?_omethod=DELETE" method="POST" class="d-inline"  >
-                                <button class="btn btn-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-trash" style="font-size: 15px;">
+                                <button class="btn btn-danger" style="margin-left: 5px;" type="submit"><i class="fas fa-trash" style="font-size: 15px;">
+
                                 </i></button>
                                </form>
                             </td>
@@ -89,15 +95,6 @@
     </div>
 
 
-</section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="assets/js/agency.js"></script>
-
-
+  </section>
 </body>
-                  
 </html>

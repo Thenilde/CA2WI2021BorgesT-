@@ -3,22 +3,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
   <title>Music Shop</title>
 </head>
-<body>
+<body class="bg-white">
   <div class="container">
-   <h3 >  Edit Instrument   </h3>
+   <h3 > Add Instrument   </h3>
 
     <form action="/musics/<%= music.id %>?_omethod=PUT" method="POST"> <!--     making a post request to update a document according to user new changes.          -->
   <%- include('form_field') %>  
 <!--     calling the form field file           -->
     </form>
-  </div>
-
   
 </body>
 </html>
