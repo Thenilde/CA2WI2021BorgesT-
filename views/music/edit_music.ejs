@@ -1,0 +1,24 @@
+
+<!--      html code used to edit a car part               -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+  <title>Music Shop</title>
+</head>
+<body>
+  <div class="container">
+   <h3 >  Edit Instrument   </h3>
+
+    <form action="/musics/<%= music.id %>?_omethod=PUT" method="POST"> <!--     making a post request to update a document according to user new changes.          -->
+  <%- include('form_field') %>  
+<!--     calling the form field file           -->
+    </form>
+  </div>
+
+  
+</body>
+</html>

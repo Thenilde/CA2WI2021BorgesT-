@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title> Music Shop</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <!-- NAvigator bar for the website.-->
+ <body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="#page-top" style="color: rgb(214,115,44);">Music Shop</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" data-toogle="collapse" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation" style="background-color: rgb(214,115,44);"><i class="fa fa-bars"></i></button>
+        </div>
+    </nav>
+  
+    
+
+
+    <section id="instruments" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                 <h2 class="text-uppercase section-heading"> Instruments  </h2>
+         
+            </div>
+            <a href="/musics/new" class="btn btn-success">New Instrument</a>
+             <div class="col-lg-12 text-center"> <p> </p>   </div>
+             
+ 
+ <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Instrument</th>
+                            <th>Price</th>
+                            <th>Color</th>
+                            <th>Year</th>
+                            <th>Comments</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <% musics.forEach(music => { %>
+                        <tr>
+                            
+                            <td> <%= music.instrument %> </td>
+                            <td> <%= music.price %> </td>
+                            <td>  <%= music.color %>  </td>
+                            <td> <%= music.year %> </td>
+                            <td> <%= music.comments %> </td>
+                
+                            <td>
+                              
+                                  <a href="/musics/edit/<%= music.id %>"  >
+                                <button class="btn btn-success" style="margin-left: 5px;" type="submit"><i class="fa fa-pencil" style="font-size: 15px;">
+                                </i></button>
+                            </a>
+
+                               
+                                <form action="/musics/<%= music.id %>?_omethod=DELETE" method="POST" class="d-inline"  >
+                                <button class="btn btn-danger" style="margin-left: 5px;" type="submit"><i class="fa fa-trash" style="font-size: 15px;">
+                                </i></button>
+                               </form>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            </div>
+
+         
+        </div>
+    </div>
+
+
+</section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/js/agency.js"></script>
+
+
+</body>
+                  
+</html>
