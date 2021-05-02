@@ -1,11 +1,10 @@
-const express = require('express') // getting the express package
+const express = require('express') 
 
-const Music = require('../models/music') // getting the model
+const Music = require('../models/music') 
 const router = express.Router()  // 
 
-// difining the route carparts new and rendering the static page. And a form is used to pass the user input to the api.
 router.get('/new', (req, res) => {
-  res.render('music/new_music', { music: new Music() })// user input is passed to the database collection model.
+  res.render('music/new_music', { music: new Music() })
 })
 
 router.get('/edit/:id', async (req, res) => {// defining new route to edit a car part.
